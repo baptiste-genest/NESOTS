@@ -1,4 +1,6 @@
-# Non Euclidean Sliced Optimal Transport
+# Non Euclidean Sliced Optimal Transport Sampling
+## Baptiste GENEST, Nicolas COURTY, David COEURJOLLY
+### Eurographics 24
 
 Here are the instructions to generate blue noise samples on the sphere and hyperbolic spaces in any dimensions or to sample meshes of genus 0 (see spherical sampling) or genus >= 2 (see local hyperbolic sampling)
 

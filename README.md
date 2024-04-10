@@ -1,6 +1,10 @@
 # Non Euclidean Sliced Optimal Transport Sampling
-## Baptiste GENEST, Nicolas COURTY, David COEURJOLLY
-### Eurographics 24
+
+Source code of the article:
+
+Genest, Baptiste, Nicolas Courty, and David Coeurjolly. "Non-Euclidean Sliced Optimal Transport Sampling", Computer Graphics Forum (Proceedings of Eurographics), April, 2024
+
+![Capture d’écran 2024-04-10 à 08 37 32](https://github.com/baptiste-genest/NESOTS/assets/700165/b690e08d-e999-47cc-b1b9-37cb85438906)
 
 Here are the instructions to generate blue noise samples on the sphere and hyperbolic spaces in any dimensions or to sample meshes of genus 0 (see spherical sampling) or genus >= 2 (see local hyperbolic sampling)
 
@@ -51,20 +55,20 @@ to generate the mesh.
 
 To then sample a mesh, use 
 ```bash
-./spherical_mesh_sampling --input_mesh data/bunny.obj --sphere_mesh data/spherical-bunny.obj --sample_size 1000
+./spherical_mesh_sampling --input_mesh ../data/bunny.obj --sphere_mesh data/spherical-bunny.obj --sample_size 1000
 ```
 
 ## Local Hyperbolic Mesh Sampling
 
 
 ```bash
-./local_hyperbolic_mesh_sampling --input_mesh data/macaca.obj --sample_size 1000
+./local_hyperbolic_mesh_sampling --input_mesh ../data/macaca.obj --sample_size 1000
 ```
 
 ## Visualizing results
 
 ```bash
-./vizu_pc --input_mesh data/macaca.obj --input_points /tmp/out.pts
+./vizu_pc --input_mesh ../data/macaca.obj --input_points /tmp/out.pts
 ```
 
 ## Projective Plane Sampling

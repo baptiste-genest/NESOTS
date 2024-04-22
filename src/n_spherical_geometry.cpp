@@ -116,7 +116,7 @@ std::pair<NSphericalGeometry::points, scalar> NSphericalGeometry::computeOTSlice
 
     scalar SW=0;
 #pragma omp parallel for reduction(+:SW)
-    for (uint32_t i =0; i < nb_batches; ++i)
+    for (int32_t i = 0; i < nb_batches; ++i)
     {
         slice gamma = getSlice();
         scalar c = 0;

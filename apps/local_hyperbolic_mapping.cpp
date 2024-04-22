@@ -124,7 +124,6 @@ points computeOTSlice(const Geometry::points &mu, const StaticMeshSamples &nu,co
     for (int i = 0;i<faceRestriction.size();i++)
         weights[i] = nu.faceToSamples.at(faceRestriction[i].second).size();
     std::discrete_distribution<int> d(weights.begin(),weights.end());
-    //points sub_nu[nb_batches];
     std::vector<points> sub_nu(nb_batches);
     for(auto k=0; k < nb_batches; ++k)
         sub_nu[k] = subSampleThenMap(nu,mu.size(),faceRestriction,d);

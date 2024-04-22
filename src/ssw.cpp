@@ -84,8 +84,8 @@ std::tuple<ints, scalars, array_elements> cumulative_function_difference(const s
     ints y(C.size());scalars d(C.size());
     int la = 0,lb = 0;
     for (int i = 0;i<C.size();i++) {
-            for (;a[la] < C[i].value && la < a.size();la++){};
-            for (;b[lb] < C[i].value && lb < b.size();lb++){};
+            for (;la < a.size() && a[la] < C[i].value;la++){};
+            for (;lb < b.size() && b[lb] < C[i].value;lb++){};
         y[i] = la-lb;
         if (i)
             d[i] = C[i].value-C[i-1].value;

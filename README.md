@@ -36,10 +36,10 @@ to enable visualization with polyscope : https://polyscope.run/
 
 To generate blue noise points on the sphere in dimension 3, a classical use-case would be
 ```bash
-./spherical_bluenoise --dim 3 --sample_size 1000 
+./spherical_bluenoise --dim 3 --sample_size 1000 --viz 
 ```
 
-The process is the same for the hyperbolic case with the exe.
+The process is the same for the hyperbolic case with the executable.
 
 Note that you can sample any distribution by providing samples with the option --target\_measure nu.pts
 
@@ -55,8 +55,9 @@ to generate the mesh.
 
 To then sample a mesh, use 
 ```bash
-./spherical_mesh_sampling --input_mesh ../data/bunny.obj --sphere_mesh data/spherical-bunny.obj --sample_size 1000
+./spherical_mesh_sampling --input_mesh ../data/spot.obj --sphere_mesh ../data/spherical-spot.obj --sample_size 1000
 ```
+The command above would reproduce the top row of the figure 6.
 
 ## Local Hyperbolic Mesh Sampling
 
@@ -64,7 +65,7 @@ To then sample a mesh, use
 ```bash
 ./local_hyperbolic_mesh_sampling --input_mesh ../data/macaca.obj --sample_size 1000
 ```
-
+The command above would reproduce the bottom row of the figure 6.
 ## Visualizing results
 
 ```bash
